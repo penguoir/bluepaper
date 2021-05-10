@@ -22,7 +22,7 @@ jobs:
             front-end.md
             
       - name: Install texi2any
-        run: sudo apt-get install texi2any
+        run: sudo apt-get install texinfo
       
       - name: Generate site using texi2any
         run: texi2any --html output.texi
