@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+    
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Pandoc - convert to .texi
+        uses: docker://pandoc/core:2.9
+        with:
+          args: >-
+            --shift-heading-level-by=-1
+            --output=output.texi
+            front-end.md
+            
+      - name: Install texi2any
+        run: sudo apt-get install texi2any
+      
+      - name: Generate site using texi2any
+        run: texi2any --html output.texi
+            
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
