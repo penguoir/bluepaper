@@ -25,7 +25,12 @@ jobs:
         run: sudo apt-get install texinfo
       
       - name: Generate site using texi2any
-        run: texi2any --html output.texi
+        run: >
+          texi2any
+          --html
+          --css-include=styles.css
+          --set-customization-variable EXTRA_HEAD='<meta name="viewport" content="width=device-width, initial-scale=1">' 
+          output.texi
             
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
