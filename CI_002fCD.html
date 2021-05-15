@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 6.7, http://www.gnu.org/software/texinfo/ -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CI/CD (Learn front-end web development)</title>
+
+<meta name="description" content="CI/CD (Learn front-end web development)">
+<meta name="keywords" content="CI/CD (Learn front-end web development)">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2any">
+<link href="index.html" rel="start" title="Top">
+<link href="DevOps.html" rel="up" title="DevOps">
+<link href="Business-and-ethics.html" rel="next" title="Business and ethics">
+<link href="Hosting.html" rel="prev" title="Hosting">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: initial; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  width: 95vw;
+  max-width: 80ch;
+  margin: 32px auto;
+  line-height: 1.5;
+}
+
+a {
+  color: rgb(29, 78, 216);
+}
+
+a:visited {
+  color: rgb(55, 48, 163);
+}
+
+hr {
+  color: rgb(239, 246, 255);
+}
+
+
+
+-->
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body lang="en">
+<span id="CI_002fCD"></span><div class="header">
+<p>
+Previous: <a href="Hosting.html" accesskey="p" rel="prev">Hosting</a>, Up: <a href="DevOps.html" accesskey="u" rel="up">DevOps</a> &nbsp; </p>
+</div>
+<hr>
+<span id="CI_002fCD-1"></span><h3 class="section">9.3 CI/CD</h3>
+<span id="g_t_0023cicd"></span><p><strong>Knowledge Section:</strong> You only have to read the following section.
+It is intended to provide you with an overview of existing technologies,
+so you have the context for when you encounter them in the real world.
+</p>
+<p>Continuous integration/Continuous delivery (CI/CD) allows developers to
+work on products and release the new code efficiently. CI/CD systems
+usually take the following form:
+</p>
+<ul>
+<li> A Git repository to which developers upload code.
+</li><li> A server that runs tasks on this repository.
+</li></ul>
+
+<p>For example, the server could run some of the following tasks:
+</p>
+<ul>
+<li> Run style checks (e.g.&nbsp;using semicolons in JavaScript files).
+</li><li> Check that all tests pass.
+</li><li> Send a message to the lead developer.
+</li><li> Upload the new code to the server.
+</li><li> Upload the new code to a staging (temporary) server for further tests.
+</li></ul>
+
+<p>CI/CD is helpful because it prevents mistakes. For example, developers
+don&rsquo;t accidentally upload test code to the live server. Also, it
+enforces best practices such as testing.
+</p>
+<p>You can use <a href="https://github.com/features/actions">GitHub Actions</a> to
+run a CI/CD system. There are other platforms which provide similar
+services such as GitLab, CircleCI and Jenkins.
+</p>
+
+
+
+</body>
+</html>
